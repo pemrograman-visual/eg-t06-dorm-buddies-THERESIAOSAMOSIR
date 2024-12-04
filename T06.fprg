@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="T06"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-04 05:05:04 PM"/>
+        <attribute name="created" value="QVNVUztTVU5OWS1MQVBUT1A7MjAyNC0xMi0wNDswNTowMjoyNiBQTTsyNTEy"/>
+        <attribute name="edited" value="QVNVUztTVU5OWS1MQVBUT1A7MjAyNC0xMi0wNDswNTowNDozOCBQTTs0O1dJTkZSRVk7TEFQVE9QLTVWSFJLMEowOzIwMjItMTItMTI7MTA6MTk6MzEgQU07WDAyLmZwcmc7NjI2MA=="/>
+        <attribute name="edited" value="QVNVUztTVU5OWS1MQVBUT1A7MjAyNC0xMi0wNDswNTowNTowNCBQTTsxOzI2MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="inisialisasi"/>
+        </body>
+    </function>
+    <function name="inisialisasi" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="True" size="5"/>
+            <declare name="i, x" type="Integer" array="False" size=""/>
+            <declare name="n" type="String" array="False" size=""/>
+            <assign variable="n" expression="&quot;benar&quot;"/>
+            <assign variable="i" expression="0"/>
+            <call expression="input(nama)"/>
+        </body>
+    </function>
+    <function name="input" type="None" variable="">
+        <parameters>
+            <parameter name="nama" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="n" type="String" array="False" size=""/>
+            <declare name="i, x, k" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="&quot;benar&quot;"/>
+            <assign variable="i" expression="0"/>
+            <while expression="n = &quot;benar&quot;">
+                <input variable="nama[i]"/>
+                <if expression="i = 3">
+                    <then>
+                        <assign variable="n" expression="&quot;salah&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="n" expression="&quot;benar&quot;"/>
+                    </else>
+                </if>
+                <if expression="nama[i] = &quot;---&quot;">
+                    <then>
+                        <assign variable="n" expression="&quot;salah&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="i+1"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="x" expression="i"/>
+            <call expression="output(nama, i, x)"/>
+        </body>
+    </function>
+    <function name="output" type="None" variable="">
+        <parameters>
+            <parameter name="nama" type="String" array="True"/>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <assign variable="x" expression="i"/>
+            <for variable="i" start="0" end="x-1" direction="inc" step="1">
+                <output expression="nama[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
